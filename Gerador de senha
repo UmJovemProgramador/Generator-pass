@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    char senha[11]; // a senha terá 10 caracteres
+    int i;
+    
+    printf("Olá, este é um gerador de senha, e ele combina vários caracteres paa gerar senhas diferentes!\n\n");
+
+    srand(time(NULL)); // inicializa o gerador de números aleatórios com o tempo atual
+
+    for(i = 0; i < 10; i++) {
+        int r = rand() % 3; // gera um número aleatório entre 0 e 2
+        if(r == 0) {
+            senha[i] = 'a' + (rand() % 26); // gera uma letra minúscula aleatória
+        } else if(r == 1) {
+            senha[i] = 'A' + (rand() % 26); // gera uma letra maiúscula aleatória
+        } else {
+            senha[i] = '0' + (rand() % 10); // gera um dígito numérico aleatório
+        }
+    }
+
+    senha[10] = '\0'; // adiciona o caractere nulo no final da string para indicar o fim
+
+    printf("Senha gerada: %s\n", senha);
+
+    return 0;
+}
