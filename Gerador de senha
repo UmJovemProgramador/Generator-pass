@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -6,7 +7,7 @@ int main() {
     char senha[11]; // a senha terá 10 caracteres
     int i;
     
-    printf("Olá, este é um gerador de senha, e ele combina vários caracteres paa gerar senhas diferentes!\n\n");
+    printf("Olá, este é um gerador de senha, e ele combina vários caracteres para gerar senhas diferentes!\n\n");
 
     srand(time(NULL)); // inicializa o gerador de números aleatórios com o tempo atual
 
